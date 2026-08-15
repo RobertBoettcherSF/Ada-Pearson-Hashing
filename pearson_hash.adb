@@ -7,7 +7,7 @@ package body Pearson_Hash is
       -- Standard Pearson Hashing Algorithm
       -- h := T[h XOR c]
       for I in Input'Range loop
-         H := Table(H xor Character'Pos(Input(I)));
+         H := Table(H xor Unsigned_8(Character'Pos(Input(I))));
       end loop;
       return H;
    end Hash;
